@@ -11,3 +11,16 @@ The program works, but I can see how adding more states would make the code hard
 
 This phase helped me understand why the State Pattern can make larger programs easier to maintain.
 
+
+## Phase 2: Architecture Transition
+
+In Phase 2, I refactored the SentinelGuard system to use the State Pattern instead of conditional statements.
+
+The SentinelGuard class acts as the Context. It stores the current state and delegates actions to the appropriate state object.
+
+The IdleState, PatrollingState, and AttackingState classes each handle their own behavior and transitions.
+
+I think this approach is cleaner because SentinelGuard no longer needs to check which state it is in. Each state class is responsible for its own logic, making the code easier to organize and expand.
+
+Although this approach requires more classes, it should make adding new states easier without changing the main guard logic.
+
