@@ -7,6 +7,14 @@ public class SentinelGuard {
         currentState = new IdleState(this);
     }
 
+    public SentinelGuard(boolean startSleeping) {
+        if (startSleeping) {
+            currentState = new SleepingState(this);
+        } else {
+            currentState = new IdleState(this);
+        }
+    }
+
     public void setState(GuardState state) {
         currentState = state;
     }

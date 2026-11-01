@@ -24,3 +24,18 @@ I think this approach is cleaner because SentinelGuard no longer needs to check 
 
 Although this approach requires more classes, it should make adding new states easier without changing the main guard logic.
 
+
+## Phase 3: Expanding the System
+
+In Phase 3, I added a SleepingState class to give the guard a new behavior.
+
+While sleeping, the guard ignores enemies and lost targets. However, hearing a noise wakes the guard up and changes its state to Patrolling.
+
+This phase demonstrates the Open/Closed Principle because I extended the system by adding a new class instead of changing the logic inside the existing state classes.
+
+I only needed to create SleepingState and update SentinelGuard and Main to support and test the new starting state.
+
+IdleState, PatrollingState, and AttackingState remained completely unchanged.
+
+I can see how the State Pattern makes adding new behaviors easier without affecting existing ones.
+
