@@ -39,3 +39,21 @@ IdleState, PatrollingState, and AttackingState remained completely unchanged.
 
 I can see how the State Pattern makes adding new behaviors easier without affecting existing ones.
 
+
+## Phase 4: Validation & Reflection
+
+In Phase 4, I tested the Sentinel Guard system to make sure all state transitions worked correctly.
+
+I simulated the guard starting in SleepingState and tested how it reacted to seeing enemies, losing targets, and hearing noises.
+
+I also tested the Idle, Patrolling, and Attacking states to verify that actions that should be ignored did not cause incorrect transitions.
+
+Comparing Phase 1 to Phase 4, I think the State Pattern is more extensible for a professional software project.
+
+In Phase 1, I had to use conditional statements to check the guard's current state. This worked for a small program, but adding more states would make the code harder to maintain.
+
+With the State Pattern, each state has its own class and handles its own behavior. This makes it easier to add new states without rewriting existing logic.
+
+The State Pattern was a little harder to understand at first because it required more classes and objects. However, once I understood how SentinelGuard delegates actions to the current state, the structure made more sense.
+
+Overall, I prefer the State Pattern for larger projects because it keeps the code organized, reusable, and easier to expand.
